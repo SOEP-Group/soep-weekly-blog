@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Satellite Orbit and Event Predictor - SOEP</title>
+    <title>SOEP Project Weekly Updates</title>
     <style>
         /* CSS Styles */
 
@@ -29,57 +29,6 @@
             padding-bottom: 10px;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: #fff;
-        }
-
-        h2 {
-            color: #4CAF50;
-            margin-top: 30px;
-        }
-
-        h3 {
-            color: #388E3C;
-            margin-top: 20px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        ol {
-            margin-left: 20px;
-        }
-
-        footer {
-            background: #4CAF50;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        /* Responsive Image Placeholder */
-        .image-placeholder {
-            width: 100%;
-            height: 300px;
-            background-color: white;
-            text-align: center;
-            line-height: 300px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        /* Navigation (Optional) */
         nav {
             background: #388E3C;
             overflow: hidden;
@@ -97,6 +46,33 @@
             background-color: #4CAF50;
         }
 
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-top: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
             .container {
@@ -111,110 +87,29 @@
 </head>
 <body>
     <header>
-        <h1>Satellite Orbit and Event Predictor - SOEP</h1>
+        <h1>SOEP Project Weekly Updates</h1>
     </header>
 
+    <!-- Navigation -->
     <nav>
-        <a href="#introduction">Introduction</a>
-        <a href="#project-goal">Project Goal</a>
-        <a href="#roles">Roles</a>
-        <a href="#project-plan">Project Plan</a>
-        <a href="#detailed-plan">Detailed Plan</a>
+        <a href="#week1">Week 1</a>
+        <a href="#week2">Week 2</a>
+        <a href="#week3">Week 3</a>
     </nav>
 
     <div class="container">
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Welcome to the Satellite Orbit and Event Predictor (SOEP) project plan. This project aims to develop a C++ application that predicts satellite passes, collision risks, orbital decay, and re-entry events.</p>
-        </section>
-
-        <section id="project-goal">
-            <h2>Project Goal</h2>
-            <p>SOEP provides real-time data, visualizations, and an interface for satellite tracking and space object management. The application is designed to assist in monitoring satellite activities and predicting significant events related to satellite orbits.</p>
-        </section>
-
-        <section id="roles">
-            <h2>Roles</h2>
-            <ul>
-                <li><strong>Arian</strong> - Math, Backend</li>
-                <li><strong>Suad</strong> - Backend, Math</li>
-                <li><strong>Sandra</strong> - Frontend, Backend</li>
-                <li><strong>André</strong> - Backend</li>
-                <li><strong>Ivan</strong> - Backend, Frontend</li>
-                <li><strong>Shakir</strong> - Backend</li>
-                <li><strong>Andrés</strong> - Backend, Math</li>
-                <li><strong>Ellen</strong> - Frontend, Math</li>
-            </ul>
-
-            <h3>Frontend Developers</h3>
-            <p>The frontend team focuses on the user interface and user experience, implementing the components that users interact with directly.</p>
-
-            <h3>Math Team</h3>
-            <p>This team is responsible for mathematical algorithms, data processing, and backend integration. Members contribute to both mathematical computations and some backend functions.</p>
-
-            <h3>Backend Developers</h3>
-            <p>The backend team works together with the math team. Their primary objectives are to handle the server-side logic, database management, and API integration, ensuring the frontend team receives the necessary data and functionality.</p>
-        </section>
-
-        <section id="project-plan">
-            <h2>Project Plan</h2>
-            <ol>
-                <li><strong>Project Initialization & Research:</strong> Understand the problem deeply and set a strong foundation for the project. Research satellite tracking algorithms, collision prediction models, and relevant data sources.</li>
-                <li><strong>System Design & Architecture:</strong> Set up a simple API node and a backend to process the data, and also a simple frontend that receives all the information.</li>
-                <li><strong>Algorithm Development & Math:</strong> Develop and test core algorithms for satellite pass prediction, collision probability, orbital decay, and re-entry, ensuring the math is correct.</li>
-                <li><strong>Visualization Module Development:</strong> Develop a visualization module to allow users to view satellite orbits and real-time tracking.</li>
-                <li><strong>Interface (UI) Development:</strong> Create an interactive, user-friendly interface for data input and result visualization.</li>
-                <li><strong>System Integration:</strong> Integrate all components (algorithms, visualizations, and UI) into a unified system.</li>
-                <li><strong>System Testing:</strong> Perform thorough functional, non-functional, and performance testing on the fully integrated system. Identify and resolve bugs or usability issues.</li>
-            </ol>
-        </section>
-
-        <section id="architecture">
-            <h2>Architecture</h2>
-            <div class="image-placeholder"> <img src="images/architecture.png" alt="Architecture Diagram" style="width:40%;height:100%;">
-            </div>
-            <p><em>Note: Please replace the placeholder with your architecture image when available.</em></p>
-
-            <h3>API</h3>
-            <p>We will use the <a href="https://www.n2yo.com/api/" target="_blank">N2YO API</a> to get the satellite information.</p>
-
-            <h3>Backend</h3>
-            <p>The backend works as both the API and for serving the frontend through server-side rendering. We will use templating to send back parts of HTML. When in need of C++ functions, we will be able to either call on the executable to generate some file or, if the C++ code is built into a DLL, call the DLL functions and receive the data back that way. The whole backend will be containerized containing the SOEP executable or dynamic library and will work as a middleman between those two parts of our program.</p>
-
-            <p>The technology that will be used is:</p>
-            <ul>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Some templating engine (Pug, Handlebars, etc.)</li>
-                <li>FFI for using DLLs (optional)</li>
-                <li>Child Processes library for calling executables (optional)</li>
-                <li>Postgres library for storing the results of our simulations if we want to store the data in a database instead of blob storage</li>
-            </ul>
-
-            <p>The optional tag indicates technology that will be used depending on our chosen approach. For example, if we decide to use DLLs instead of executables, we will use FFI and not Child Processes.</p>
-
-            <p>The backend will also be containerized using Docker, so that we can spin up the stack whenever and wherever we need.</p>
-
-            <h3>C++</h3>
-            <p>This component will handle all calculations for satellite orbits, collision probability, and predictions for when a chosen satellite will pass over a specific geographic location. In the future, we will add other calculations.</p>
-
-            <h3>Frontend</h3>
-            <p>The frontend will focus on visualization and user interface. The website will display all the information from the satellites that are being tracked and aims to be user-friendly and modern, with a strong focus on functionality.</p>
-
-            <p>The website will be developed using HTMX, CSS, and JavaScript. It will display a 3D rendering of the Earth with all current satellites visible at their current positions. When a user clicks on a satellite, its information will show in a popup, and its orbit will be visible around the Earth. WebGL will be used to render the 3D Earth.</p>
-        </section>
-
-        <section id="detailed-plan">
-            <h2>Detailed 3-Week Plan</h2>
-            <p>We will have two meetings per week, every Tuesday and Friday, where we discuss the status of the project and ensure everybody knows the next steps.</p>
-
-            <h3>Week 1</h3>
+        <section id="week1">
+            <h2>Week 1</h2>
             <p>In the first week, we'll focus on getting the project off the ground. We'll start by meeting up to discuss the project goals and make sure everyone is aligned. We'll dive into researching satellite tracking algorithms and collision prediction models, and we'll familiarize ourselves with the N2YO API to fetch satellite data. We've distributed tasks among the team, and everyone has an issue to work on. We'll set up our development environment, including repositories and any necessary software. We'll also decide on our communication methods and schedule regular meetings to keep things running smoothly. By the end of the week, we should have a detailed plan and be ready to dive into the next steps.</p>
+        </section>
 
-            <h3>Week 2</h3>
+        <section id="week2">
+            <h2>Week 2</h2>
             <p>In Week 2, we will continue developing the project by integrating the N2YO API and working on backend functionality for satellite predictions and collision risks. The frontend will focus on building the user interface and initial visualizations, including basic 3D rendering with WebGL. We'll also ensure data flow between components. Documentation will be updated, and progress will be reviewed during our Tuesday and Friday meetings. By the end of Week 2, we should have a very basic version of the application running.</p>
+        </section>
 
-            <h3>Week 3</h3>
+        <section id="week3">
+            <h2>Week 3</h2>
             <p>In Week 3, we'll focus on reviewing the progress we've made and adjusting our plans as needed. We'll assess the performance of the key features we've developed so far, check for any issues, and make improvements. This includes reviewing both the technical aspects and how well the team has been collaborating.</p>
 
             <p>While we conduct this review, we'll also continue working on ongoing tasks to avoid losing momentum. This will ensure that development doesn't slow down as we evaluate our progress.</p>
@@ -226,7 +121,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2023 Satellite Orbit and Event Predictor (SOEP) Team</p>
+        <p>&copy; 2023 SOEP Project Team</p>
     </footer>
 </body>
 </html>
