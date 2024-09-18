@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SOEP</title>
+    <title>Our Team</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,39 +19,38 @@
             color: white;
         }
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .posts {
-            list-style-type: none;
-            padding: 0;
-        }
-        .posts li {
-            margin: 10px 0;
-        }
-        .posts li a {
+        a {
             text-decoration: none;
-            color: #333;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
-        .posts li a:hover {
             color: #007bff;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>SOEP</h1>
+    <h1>Our Team</h1>
 </header>
 
 <div class="container">
-    <ul class="posts">
-        <li><a href="posts/our-team.html">Our Team</a></li>
-    </ul>
+    <p>Ivan loves doing frontend</p>
+
+    <p>Here is a image of cute puppies:</p>
+    <img src="../images/dog.jpg" alt="puppies">
+
+    <p><a href="../index.html">Back to homepage</a></p>
 </div>
 
 </body>
