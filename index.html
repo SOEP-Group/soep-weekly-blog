@@ -1,127 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SOEP Project Weekly Updates</title>
-    <style>
-        /* CSS Styles */
+---
+layout: default
+title: Home
+---
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-        header {
-            background: #4CAF50;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #388E3C 3px solid;
-        }
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-        header h1 {
-            text-align: center;
-            margin: 0;
-            padding-bottom: 10px;
-        }
+    {{ post.content | strip_html | truncatewords: 50 }}
 
-        nav {
-            background: #388E3C;
-            overflow: hidden;
-        }
+  </div>
+  {% endfor %}
+</div>
 
-        nav a {
-            color: #fff;
-            padding: 14px 20px;
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-        }
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
 
-        nav a:hover {
-            background-color: #4CAF50;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: #fff;
-        }
-
-        h2 {
-            color: #4CAF50;
-            margin-top: 30px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        footer {
-            background: #4CAF50;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-            }
-
-            header h1 {
-                font-size: 24px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>SOEP Project Weekly Updates</h1>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="#week1">Week 1</a>
-        <a href="#week2">Week 2</a>
-        <a href="#week3">Week 3</a>
-    </nav>
-
-    <div class="container">
-        <section id="week1">
-            <h2>Week 1</h2>
-            <p>In the first week, we'll focus on getting the project off the ground. We'll start by meeting up to discuss the project goals and make sure everyone is aligned. We'll dive into researching satellite tracking algorithms and collision prediction models, and we'll familiarize ourselves with the N2YO API to fetch satellite data. We've distributed tasks among the team, and everyone has an issue to work on. We'll set up our development environment, including repositories and any necessary software. We'll also decide on our communication methods and schedule regular meetings to keep things running smoothly. By the end of the week, we should have a detailed plan and be ready to dive into the next steps.</p>
-        </section>
-
-        <section id="week2">
-            <h2>Week 2</h2>
-            <p>In Week 2, we will continue developing the project by integrating the N2YO API and working on backend functionality for satellite predictions and collision risks. The frontend will focus on building the user interface and initial visualizations, including basic 3D rendering with WebGL. We'll also ensure data flow between components. Documentation will be updated, and progress will be reviewed during our Tuesday and Friday meetings. By the end of Week 2, we should have a very basic version of the application running.</p>
-        </section>
-
-        <section id="week3">
-            <h2>Week 3</h2>
-            <p>In Week 3, we'll focus on reviewing the progress we've made and adjusting our plans as needed. We'll assess the performance of the key features we've developed so far, check for any issues, and make improvements. This includes reviewing both the technical aspects and how well the team has been collaborating.</p>
-
-            <p>While we conduct this review, we'll also continue working on ongoing tasks to avoid losing momentum. This will ensure that development doesn't slow down as we evaluate our progress.</p>
-
-            <p>We'll reassign roles and update tasks based on the current status of the project, ensuring everyone is focused on the most important priorities. We'll also update the roadmap and set clear goals for the upcoming weeks, keeping the team aligned and on track.</p>
-
-            <p>By the end of the week, we'll have a refined plan, updated tasks, and a clearer direction, while keeping our existing work moving forward.</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2023 SOEP Project Team</p>
-    </footer>
-</body>
-</html>
