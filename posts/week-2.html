@@ -99,21 +99,28 @@
 
 <div class="container">
     <h2>What We Achieved This Week</h2>
-    <p>This is the second week of our Satellite Orbit and Event Predictor (SOEP) project, and we continued making substantial progress. Here’s a summary of what we accomplished:</p>
+    <p>This is the second week of our Satellite Orbit and Event Predictor (SOEP) project, and we made good progress in building the foundation. Here’s a summary of what we accomplished:</p>
 
     <ul>
-        <li><strong>Server Setup:</strong> After reviewing our options, we decided to host our own server instead of using a cloud solution. This will give us more control over the environment and reduce ongoing cloud costs.</li>
-        
-        <li><strong>Docker Implementation:</strong> We created a Dockerfile for the frontend application, allowing us to easily build and deploy the frontend in a consistent and isolated environment.</li>
-        
-        <li><strong>Database Setup:</strong> We integrated PostgreSQL into our system, setting up the database to store and manage satellite-related data efficiently.</li>
-        
-        <li><strong>Frontend Redesign:</strong> We implemented a new frontend design to improve the user experience, focusing on better visual presentation and navigation for our satellite information display.</li>
-        
-        <li><strong>Sgp4Prop Investigation:</strong> We delved deeper into the Sgp4Prop (Simplified General Perturbations) library, a key component for our satellite orbit prediction functionality, ensuring a better understanding of how we can use it for more accurate calculations.</li>
+        <li><strong>API Integration:</strong> We successfully made our first basic API call to retrieve satellite data, which will be essential for the tracking functionality.</li>
+
+        <li><strong>Website Design:</strong> We implemented a basic design for the website, laying the groundwork for the user interface.</li>
+
+        <li><strong>Frontend Development:</strong> We started implementing key components for displaying satellite information on the website.</li>
+
+        <li><strong>Cloud Setup:</strong> Initially, we set up Google Cloud services for our infrastructure, but later decided to change this approach.</li>
+
+        <li><strong>Concurrency Decisions:</strong> We discussed and evaluated different data handling techniques, debating between using DLL, file-based, or alternative methods for better performance.</li>
+
+        <li><strong>Multithreading Implementation:</strong> To optimize performance, we implemented multithreading for handling satellite data calculations.</li>
+
+        <li><strong>Blog Setup:</strong> We created a blog section to document our progress and share updates.</li>
+
+        <li><strong>CUDA vs. CPU:</strong> The team began investigating whether to leverage CUDA for GPU acceleration or stick with CPU-based processing for satellite calculations.</li>
     </ul>
 
     <p>Here’s how our updated frontend design looks so far:</p>
+
     <img src="../images/earth_v2.PNG" alt="Website design preview">
 
     <a href="../index.html" class="back-link">Back to homepage</a>
