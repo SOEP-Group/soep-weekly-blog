@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Week 8 - SOEP Project</title>
+    <title>Week 12 - SOEP Project</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -110,41 +110,37 @@
 <body>
 
     <header>
-        <h1>Week 8 - Progress Update</h1>
+        <h1>Week 12 - Progress Update</h1>
     </header>
-
+    
     <div class="container">
         <h2>What We Achieved This Week</h2>
-        <p>This week of our Satellite Orbit and Event Predictor (SOEP) project.</p>
-
+        <p>This week we made significant progress in enhancing functionality, improving performance, and addressing design challenges. Here's a summary of what we accomplished:</p>
+    
         <ul>
-            <li><strong>Backend enhancements:</strong> Prepared the backend to handle storage of
-                all satellite data</li>
-
-            <li><strong>Database schema:</strong> Created a database schema that is ready to use with
-                our visualizer and populated it on the server with real data.</li>
-
-            <li><strong>Converted `tsince` to timestamp:</strong> Converted `tsince` to a timestamp format and ensured
-                data is correctly overwritten in the database.</li>
-
-            <li><strong>Refactored visualizer code:</strong> Cleaned and optimized the code on the visualizer side for
-                improved maintainability.</li>
-
-            <li><strong>Improved UI:</strong> Began redesigning the user interface,
-                improved satellite positioning for closer proximity to Earth, and implemented orbit display
-                functionality. Also added a viewport gizmo for easier navigation.
-            </li>
-
-            <li><strong>Logo:</strong> Started designing a logo for our project</li>
+            <li><strong>Event Section Implementation:</strong> We added functionality for the events tab in the menu, allowing users to view upcoming space events like eclipses and lunar events.</li>
+    
+            <li><strong>Collision Prediction:</strong> We began implementing the collision prediction feature. While it is not yet complete, the groundwork has been laid for this crucial functionality.</li>
+    
+            <li><strong>Database Schema Update:</strong> The database schema was updated to accommodate new features and improve data handling.</li>
+    
+            <li><strong>UI Bug Fixes:</strong> A number of bugs in the user interface were identified and resolved, resulting in a smoother user experience.</li>
+    
+            <li><strong>Events Tab Design:</strong> Work is ongoing on a new design for the events tab, ensuring it is both intuitive and visually appealing.</li>
+    
+            <li><strong>SPG4 Visualization:</strong> A major change was implemented by moving SPG4 calculations to the client side in the visualizer. This change reduces server load and speeds up calculations, providing a faster and more efficient user experience.</li>
+    
+            <li><strong>Real-Time Satellite Movement:</strong> Satellites now move in real time based on their trajectories, offering a dynamic and engaging visualization experience.</li>
+    
+            <li><strong>API Change for TLE Data:</strong> We transitioned from using ny2o to Space-Track.org for fetching TLE data. This change allows for unlimited API calls, improving data availability and system reliability.</li>
         </ul>
-
-        <p>Here’s how our updated frontend design looks so far:</p>
-
-        <img src="../images/earth_v8.png" alt="Website design preview">
-
+    
+        <p>Check out how satellites move in real time:</p>
+        <a href="https://www.soep.tech" target="_blank">View Satellite Movement</a>
+        <br>
         <a href="../index.html" class="back-link">Back to homepage</a>
-
     </div>
+    
 
 </body>
 
